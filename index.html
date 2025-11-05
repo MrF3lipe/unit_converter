@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Panel de entrada -->
+  <div class="container" id="input-panel">
+    <h2>Unit Converter</h2>
+
+    <div class="tabs">
+      <a href="#" class="tab active" id="tab-length">Length</a>
+      <a href="#" class="tab" id="tab-weight">Weight</a>
+      <a href="#" class="tab" id="tab-temp">Temperature</a>
+    </div>
+
+    <label for="value">Enter the value to convert</label>
+    <input type="number" id="value" placeholder="e.g. 20">
+
+    <label for="from-unit">Unit to Convert from</label>
+    <select id="from-unit"></select>
+
+    <label for="to-unit">Unit to Convert to</label>
+    <select id="to-unit"></select>
+
+    <button id="convert-btn">Convert</button>
+  </div>
+
+  <!-- Panel de resultado -->
+  <div class="container hidden" id="result-panel">
+    <h2>Unit Converter</h2>
+
+    <div class="tabs">
+      <a href="#" class="tab active" id="result-tab-length">Length</a>
+      <a href="#" class="tab" id="result-tab-weight">Weight</a>
+      <a href="#" class="tab" id="result-tab-temp">Temperature</a>
+    </div>
+
+    <div class="result" id="result-text">
+      Result of your calculation<br>
+      <span style="font-size: 22px;">20 ft = 609 cm</span>
+    </div>
+
+    <button id="reset-btn">Reset</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

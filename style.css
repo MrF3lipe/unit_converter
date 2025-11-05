@@ -1,0 +1,82 @@
+body {
+  font-family: "Comic Sans MS", sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 40px;
+}
+
+.container {
+  background-color: white;
+  border: 2px solid #999;
+  border-radius: 8px;
+  padding: 20px 30px;
+  width: 300px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+}
+
+.tab.active {
+  color: blue;
+  text-decoration: underline;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 6px;
+  margin-top: 5px;
+  border: 2px solid #555;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button {
+  display: block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: 2px solid #555;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+.result {
+  margin-top: 25px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.hidden {
+  display: none;
+}
