@@ -1,8 +1,3 @@
-// ----------------------------
-// 📘 Unit Converter App Logic
-// ----------------------------
-
-// Referencias principales
 const convertBtn = document.getElementById("convert-btn");
 const resetBtn = document.getElementById("reset-btn");
 const inputPanel = document.getElementById("input-panel");
@@ -12,9 +7,6 @@ const resultText = document.getElementById("result-text");
 const tabs = document.querySelectorAll(".tab");
 let currentCategory = "length";
 
-// ----------------------------
-// 🔹 Unidades disponibles
-// ----------------------------
 const units = {
   length: [
     { value: "mm", label: "Millimeters (mm)" },
@@ -40,10 +32,8 @@ weight: [
   ]
 };
 
-// Inicializa selects con las unidades de longitud
 loadUnits("length");
 
-// Manejo de pestañas
 tabs.forEach(tab => {
   tab.addEventListener("click", e => {
     e.preventDefault();
@@ -58,7 +48,6 @@ tabs.forEach(tab => {
   });
 });
 
-// Cargar opciones en los selects según categoría
 function loadUnits(category) {
   const fromSelect = document.getElementById("from-unit");
   const toSelect = document.getElementById("to-unit");
@@ -80,9 +69,6 @@ function loadUnits(category) {
   });
 }
 
-// ----------------------------
-// 🔹 Conversión general
-// ----------------------------
 convertBtn.addEventListener("click", () => {
   const value = parseFloat(document.getElementById("value").value);
   const from = document.getElementById("from-unit").value;
@@ -118,18 +104,12 @@ convertBtn.addEventListener("click", () => {
   resultPanel.classList.remove("hidden");
 });
 
-// ----------------------------
-// 🔹 Botón Reset
-// ----------------------------
 resetBtn.addEventListener("click", () => {
   inputPanel.classList.remove("hidden");
   resultPanel.classList.add("hidden");
   document.getElementById("value").value = "";
 });
 
-// ----------------------------
-// 🔹 Funciones de conversión
-// ----------------------------
 function convertLength(value, from, to) {
   const factors = {
     mm: 0.001,
@@ -160,11 +140,9 @@ function convertWeight(value, from, to) {
 function convertTemperature(value, from, to) {
   let result = value;
 
-  // Convertir a Celsius primero
   if (from === "F") result = (value - 32) * 5/9;
   if (from === "K") result = value - 273.15;
 
-  // Luego convertir de Celsius a destino
   if (to === "F") result = result * 9/5 + 32;
   if (to === "K") result = result + 273.15;
 
